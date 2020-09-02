@@ -9,16 +9,14 @@ class Solution {
         int columns=matrix[0].length;
         //行
         int rows=matrix.length;
-
-        System.out.println(rows+" "+columns);
         int row=0;
         int column=columns-1;
-        while (row<rows&&column>0){
-            System.out.println(matrix[row][column]);
+        while (row<rows&&column>=0){
+
             if(matrix[row][column]==target){
                 return true;
             }
-            if(matrix[row][column]<target){
+            if(matrix[row][column]>target){
                 column--;
             }else{
                 row++;
